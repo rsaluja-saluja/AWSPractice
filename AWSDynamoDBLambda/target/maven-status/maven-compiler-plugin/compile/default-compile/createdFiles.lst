@@ -1,0 +1,3 @@
+com\example\model\PersonResponse.class
+com\example\handler\SavePersonHandler.class
+com\example\model\PersonRequest.class

@@ -1,0 +1,47 @@
+dynamoDB Spring Boto app
+	https://www.youtube.com/watch?v=3ay92ZdCgwQ
+Create Docker image and push that to Docker hub
+	https://www.youtube.com/watch?v=F_g44rliu6M
+https://www.youtube.com/watch?v=vmbhFZJUTR0
+
+POST
+	localhost:8083/employee/
+	Request: 	
+	{
+	    "firstName" : "FirstName2",
+	    "lastName"  : "LastName2",
+	    "email" : "email2@gmail.com",
+	    "department" : {
+	        "departmentName" : "IT2",
+	        "departmentAddress" : "address2"
+	    }
+	}
+	Response:
+	{
+	    "id": "4377a34b-d5b1-4249-92ae-2ab1a9ef5015",
+	    "firstName": "FirstName2",
+	    "lastName": "LastName2",
+	    "email": "email2@gmail.com",
+	    "department": {
+	        "departmentName": "IT2",
+	        "departmentAddress": "address2"
+	    }
+	}
+	
+GET: localhost:8083/employee/89eaa5f7-1422-41dd-b086-d8157f8febc3
+
+PUT: localhost:8083/employee/89eaa5f7-1422-41dd-b086-d8157f8febc3
+	Request:
+		{
+		    "id" : "89eaa5f7-1422-41dd-b086-d8157f8febc3",
+		    "firstName" : "FirstName6",
+		    "lastName"  : "LastName6",
+		    "email" : "email2@gmail.com",
+		    "department" : {
+		        "departmentName" : "IT6",
+		        "departmentAddress" : "address6"
+		    }
+		}
+
+DELETE:
+	localhost:8083/employee/89eaa5f7-1422-41dd-b086-d8157f8febc3
