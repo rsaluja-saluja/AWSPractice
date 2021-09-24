@@ -4,6 +4,46 @@ Create Docker image and push that to Docker hub
 	https://www.youtube.com/watch?v=F_g44rliu6M
 https://www.youtube.com/watch?v=vmbhFZJUTR0
 
+Command to create and push image(in docker hub repo) with docker file -
+	Add dockerfile-maven-plugin in pom.xml with build and push goals
+	mvn clean package dockerfile:push
+	
+Without docker file: uses packeto buildpack provided by spring boot cloud native build pack feature
+	mvn spring-boot:build-image
+	docker run --rm -p <host port>:<container port> <image name> - run the image
+
+Deploy image in AWS EC2
+	Create and launch EC2 instance
+	Connect to this instance using ssh
+	switch to root user - sudo -i
+	sudo yum update -y ---- update the system
+	sudo yum install docker --- install docker
+	sudo service docker start ---- start the docker service
+	docker -v --- check docker is running
+	docker pull <image:tag>
+	Allow port(80/443 or any other) in EC2 by changing inbound rules of EC2 instance security group and 
+		then map host port to application port
+	docker run -p 80:8083 --name <container name> <image name> --- 8083 is application port
+		application would start on 8083 and it would map to port 80 
+		access this instance using public DNS or public IP
+		
+Deploy image in AWS EC2 instance from S3	
+	mvn clean install --- create package
+	create EC2 instance. and connect to it via ssh.
+	switch to root user - sudo -i
+	install java version if not updated. 
+		sudo rpm --import https://yum.corretto.aws/corretto.key 
+ 		sudo curl -L -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
+		sudo yum install -y java-11-amazon-corretto-devel
+	Create S3 bucket, uncheck Block public access option so that EC2 will be able to use it.
+	Create folder in bucket created and upload jar file created earlier. It will give Object URL of uploaded jar.
+	Make this jar file public.
+	Get this jar file on EC2
+		wget <jar file URL>
+	java -jar <jar name> -- run jar
+	Allow application port(8083) in EC2 by changing inbound rules of EC2 instance security group
+	access this instance using public DNS or public IP and add port no 8083 to it.
+	
 POST
 	localhost:8083/employee/
 	Request: 	
