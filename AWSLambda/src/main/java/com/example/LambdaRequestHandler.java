@@ -35,8 +35,8 @@ public class LambdaRequestHandler implements RequestHandler<S3Event, String>{
 		String fileName = event.getRecords().get(0).getS3().getObject().getKey();
 		
 		AWSCredentials credentials = new BasicAWSCredentials(
-				  "AKIAXPGSCZ3U6J4R4POM", 
-				  "BcVRav/Gi0agALn4KzKoxyu/zRhbpFT4x0TRfHOT"
+				  "accessKey", 
+				  "secretKey"
 				);
 		Regions region = Regions.fromName("ap-southeast-2");
 		AmazonS3 s3client = AmazonS3ClientBuilder

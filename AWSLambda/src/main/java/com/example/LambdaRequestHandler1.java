@@ -20,8 +20,8 @@ public class LambdaRequestHandler1 implements RequestHandler<Map<String,String>,
 		// TODO Auto-generated method stub
 		System.out.println("Input payload: " + input);
 
-		AWSCredentials credentials = new BasicAWSCredentials("AKIAXPGSCZ3U6J4R4POM",
-				"BcVRav/Gi0agALn4KzKoxyu/zRhbpFT4x0TRfHOT");
+		AWSCredentials credentials = new BasicAWSCredentials("accessKey",
+				"secretKey");
 		Regions region = Regions.fromName("ap-southeast-2");
 		
 		// Invoke another lambda function

@@ -1,0 +1,5 @@
+{
+    "CiphertextBlob": "AQIDAHjJdplTpIj2VDfn+WxiFcG/BBBKhGDmpI3ZL/u6odAX9gEwmrPilHyeMkOURqA/ijtmAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMTvYwvIF/Gk0Rf0gWAgEQgDuzCB+k3Zciv5Gn+NMwmW+yNr2nHjPU4C2/h/3iIMQPZHb2muW5ak7wlKVfQS5QrrjJg7sNZ6eF70OCig==",
+    "Plaintext": "LXgjvFgobaZpZdxa0ErQUNNjIznVoeUfxABr7DDWkTY=",
+    "KeyId": "arn:aws:kms:ap-southeast-2:513689177833:key/8ed441b3-4cc8-4bb0-853c-d9cd353ea48e"
+}

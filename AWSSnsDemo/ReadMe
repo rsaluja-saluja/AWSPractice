@@ -1,0 +1,6 @@
+Create Topic in SNS and takes its ARN
+Subscribe to that topic by passing email id via endpoint
+publish message via publish endpoint , the subscribed mailids will get the message in mail.
+
+SNS
+https://www.youtube.com/watch?v=9kXMLTNaQj8&list=RDCMUC4VZwhJ4T42SVHy9QbZ5rKw&index=20
